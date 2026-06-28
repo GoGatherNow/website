@@ -4,11 +4,12 @@
   --paper: oklch(0.965 0.012 58);
   --ink: oklch(0.22 0.025 45);
   --muted: oklch(0.46 0.025 45);
-  --line: oklch(0.84 0.018 55);
-  --brand: oklch(0.56 0.15 152);
-  --brand-dark: oklch(0.36 0.09 154);
-  --warm: oklch(0.78 0.11 74);
-  --blue: oklch(0.62 0.11 232);
+  --line: oklch(0.86 0.018 58);
+  --brand: oklch(0.34 0.055 31);
+  --brand-dark: oklch(0.28 0.048 31);
+  --butter: oklch(0.94 0.065 92);
+  --mist: oklch(0.86 0.035 220);
+  --cream: oklch(0.975 0.01 62);
   --radius: 18px;
   --shadow: 0 22px 60px oklch(0.28 0.03 45 / 0.12);
   font-family:
@@ -29,7 +30,7 @@ body {
   color: var(--ink);
   background:
     radial-gradient(circle at top left, oklch(0.87 0.08 78 / 0.5), transparent 28rem),
-    linear-gradient(180deg, var(--bg), oklch(0.955 0.014 148));
+    linear-gradient(180deg, var(--bg), oklch(0.956 0.012 58));
   line-height: 1.55;
 }
 
@@ -85,13 +86,13 @@ a {
   justify-content: center;
   min-height: 44px;
   padding: 0 18px;
-  border: 1px solid oklch(0.4 0.08 153);
+  border: 1px solid var(--brand-dark);
   border-radius: 999px;
   background: var(--brand-dark);
-  color: oklch(0.985 0.006 52);
+  color: var(--butter);
   font-weight: 750;
   text-decoration: none;
-  box-shadow: 0 10px 30px oklch(0.36 0.09 154 / 0.2);
+  box-shadow: 0 10px 30px oklch(0.28 0.048 31 / 0.18);
 }
 
 .button.secondary {
@@ -187,7 +188,7 @@ h3 {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--warm), var(--brand));
+  background: linear-gradient(135deg, var(--butter), var(--brand));
 }
 
 .activity-list {
@@ -219,8 +220,8 @@ h3 {
   margin: 6px 20px 20px;
   border-radius: 24px;
   background:
-    linear-gradient(120deg, transparent 42%, oklch(0.7 0.08 232 / 0.5) 43% 48%, transparent 49%),
-    linear-gradient(35deg, oklch(0.88 0.05 148), oklch(0.76 0.08 74));
+    linear-gradient(120deg, transparent 42%, oklch(0.78 0.035 220 / 0.6) 43% 48%, transparent 49%),
+    linear-gradient(35deg, var(--mist), var(--butter));
 }
 
 .section {
@@ -254,12 +255,12 @@ h3 {
 }
 
 .band {
-  background: oklch(0.28 0.04 148);
-  color: oklch(0.96 0.012 80);
+  background: var(--brand-dark);
+  color: var(--cream);
 }
 
 .band .lead {
-  color: oklch(0.86 0.025 95);
+  color: oklch(0.86 0.035 220);
 }
 
 .policy {
