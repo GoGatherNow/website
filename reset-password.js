@@ -4,7 +4,7 @@ const supabasePublishableKey = "sb_publishable_9aAveeRNnQLBNiKQq3ZS_w_19DiWSEo";
 const client = window.supabase.createClient(supabaseUrl, supabasePublishableKey, {
   auth: {
     persistSession: true,
-    detectSessionInUrl: false,
+    detectSessionInUrl: true,
   },
 });
 
