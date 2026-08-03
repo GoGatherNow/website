@@ -9,6 +9,8 @@ Static website and policy pages for GoGatherNow.
 - `/support.html` support contact page
 - `/delete-account.html` account deletion instructions
 - `/terms.html` terms of use
+- `/auth-complete.html` email confirmation landing page
+- `/reset-password.html` secure cross-device password recovery
 
 ## GitHub Pages
 
