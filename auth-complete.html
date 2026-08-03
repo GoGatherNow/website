@@ -1,27 +1,52 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Email confirmed · GoGatherNow</title>
-    <meta name="robots" content="noindex">
-    <link rel="icon" href="assets/logo.png">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+      defer
+    ></script>
+    <script src="auth-complete.js" defer></script>
   </head>
   <body>
     <main class="auth-page">
       <section class="auth-card" aria-labelledby="auth-title">
         <a class="brand auth-brand" href="/">
-          <img src="assets/logo.png" alt="">
+          <img src="assets/logo.png" alt="" />
           <span>GoGatherNow</span>
         </a>
-        <p class="eyebrow">You’re all set</p>
-        <h1 id="auth-title">Email confirmed</h1>
-        <p class="lead">
-          Your account is ready. Return to GoGatherNow and sign in with the
-          password you chose.
-        </p>
-        <a class="button auth-action" href="/">Back to GoGatherNow</a>
+        <div id="loading-state" class="auth-status" role="status">
+          <p class="eyebrow">One moment</p>
+          <h1 id="auth-title">Confirming your email</h1>
+          <p class="lead">Checking your secure link…</p>
+        </div>
+
+        <div id="success-state" class="auth-status" role="status" hidden>
+          <p class="eyebrow">You’re all set</p>
+          <h1>Email confirmed</h1>
+          <p class="lead">
+            Your account is ready. Return to GoGatherNow and sign in with the
+            password you chose.
+          </p>
+          <a class="button auth-action" href="/">Back to GoGatherNow</a>
+        </div>
+
+        <div id="invalid-state" class="auth-status" role="alert" hidden>
+          <p class="eyebrow">Link unavailable</p>
+          <h1>This link can’t be used</h1>
+          <p class="lead">
+            It may have expired or already been used. Return to GoGatherNow and
+            request a new confirmation email.
+          </p>
+          <a class="button secondary auth-action" href="support.html"
+            >Contact support</a
+          >
+        </div>
       </section>
     </main>
   </body>
