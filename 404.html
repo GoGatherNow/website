@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GoGatherNow</title>
+    <meta
+      name="description"
+      content="Find people to do things with. See the plan and join on GoGatherNow."
+    />
+    <meta property="og:title" content="A plan on GoGatherNow" />
+    <meta
+      property="og:description"
+      content="Someone is looking for people to join them. Open it on GoGatherNow."
+    />
+    <meta property="og:image" content="https://gogathernow.com/assets/logo.png" />
+    <meta name="robots" content="noindex" />
+    <!-- Absolute paths: this page is served for any unknown URL, at any depth. -->
+    <link rel="icon" href="/assets/logo.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+      defer
+    ></script>
+    <script src="/activity.js" defer></script>
+  </head>
+  <body>
+    <main class="auth-page">
+      <section class="auth-card activity-card" aria-live="polite">
+        <a class="brand auth-brand" href="/">
+          <img src="/assets/logo.png" alt="" />
+          <span>GoGatherNow</span>
+        </a>
+
+        <div id="loading-state" class="auth-status" role="status" hidden>
+          <p class="eyebrow" data-i18n="loadingEyebrow">One moment</p>
+          <h1 data-i18n="loadingTitle">Loading the plan</h1>
+        </div>
+
+        <article id="activity-state" hidden>
+          <p class="eyebrow" id="activity-category"></p>
+          <h1 id="activity-title"></h1>
+          <ul class="activity-facts">
+            <li id="activity-when"></li>
+            <li id="activity-where"></li>
+            <li id="activity-people"></li>
+            <li id="activity-host"></li>
+          </ul>
+          <p class="lead" id="activity-description" hidden></p>
+          <div class="activity-actions">
+            <a class="button auth-action" id="open-app" data-i18n="openApp">Open in GoGatherNow</a>
+            <a
+              class="button secondary auth-action"
+              href="https://play.google.com/store/apps/details?id=com.gogathernow.app"
+              data-i18n="getApp"
+              >Get the app on Google Play</a
+            >
+          </div>
+          <p class="auth-copy activity-note" data-i18n="joinNote">
+            Joining and chatting with the group happen in the app.
+          </p>
+        </article>
+
+        <div id="unavailable-state" class="auth-status" role="alert" hidden>
+          <p class="eyebrow" data-i18n="unavailableEyebrow">Plan unavailable</p>
+          <h1 data-i18n="unavailableTitle">This plan isn't available</h1>
+          <p class="lead" data-i18n="unavailableBody">
+            It may have been cancelled or made private. You can find other
+            plans near you in the app.
+          </p>
+          <a class="button auth-action" href="/" data-i18n="home">Go to GoGatherNow</a>
+        </div>
+
+        <div id="notfound-state" class="auth-status" role="alert" hidden>
+          <p class="eyebrow">404</p>
+          <h1 data-i18n="notFoundTitle">Page not found</h1>
+          <a class="button auth-action" href="/" data-i18n="home">Go to GoGatherNow</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
