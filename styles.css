@@ -429,3 +429,34 @@ button.auth-action:disabled {
     grid-template-columns: 1fr;
   }
 }
+
+/* Shared-activity preview (404.html + activity.js) */
+.activity-card h1 {
+  overflow-wrap: anywhere;
+}
+.activity-facts {
+  list-style: none;
+  margin: 18px 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  color: var(--ink);
+}
+.activity-facts li:empty {
+  display: none;
+}
+.activity-facts li {
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--cream);
+}
+.activity-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+.activity-note {
+  margin-top: 14px;
+  color: var(--muted);
+}
