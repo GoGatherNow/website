@@ -8,14 +8,14 @@ const lang = (navigator.language || "en").toLowerCase().startsWith("ro") ? "ro" 
 const text = {
   en: {
     loadingEyebrow: "One moment",
-    loadingTitle: "Loading the plan",
+    loadingTitle: "Loading the activity",
     openApp: "Open in GoGatherNow",
     getApp: "Get the app on Google Play",
     joinNote: "Joining and chatting with the group happen in the app.",
-    unavailableEyebrow: "Plan unavailable",
-    unavailableTitle: "This plan isn't available",
+    unavailableEyebrow: "Activity unavailable",
+    unavailableTitle: "This activity isn't available",
     unavailableBody:
-      "It may have been cancelled or made private. You can find other plans near you in the app.",
+      "It may have been cancelled or made private. You can find other activities near you in the app.",
     home: "Go to GoGatherNow",
     notFoundTitle: "Page not found",
     privatePlace: "Exact meeting point shared after the organizer approves you",
@@ -26,14 +26,14 @@ const text = {
   },
   ro: {
     loadingEyebrow: "O clipă",
-    loadingTitle: "Se încarcă planul",
+    loadingTitle: "Se încarcă activitatea",
     openApp: "Deschide în GoGatherNow",
     getApp: "Descarcă aplicația din Google Play",
     joinNote: "Te alături și vorbești cu grupul în aplicație.",
-    unavailableEyebrow: "Plan indisponibil",
-    unavailableTitle: "Acest plan nu este disponibil",
+    unavailableEyebrow: "Activitate indisponibilă",
+    unavailableTitle: "Această activitate nu este disponibilă",
     unavailableBody:
-      "Poate a fost anulat sau făcut privat. Găsești alte planuri lângă tine în aplicație.",
+      "Poate a fost anulat sau făcut privat. Găsești alte activități lângă tine în aplicație.",
     home: "Mergi la GoGatherNow",
     notFoundTitle: "Pagina nu a fost găsită",
     privatePlace: "Locul exact este afișat după ce organizatorul te aprobă",
